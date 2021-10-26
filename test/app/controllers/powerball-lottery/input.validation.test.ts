@@ -29,6 +29,16 @@ test("without a date", async (): Promise<void> => {
   expect(response.body.message).toBe('ticket "date" must be provided');
 });
 
+test("with an invalid date", (): void => {
+  const t = (): void =>
+    validateBody({
+      ...validTicket,
+      date: "not a date"
+    });
+
+  expect(t).toThrow(ValidationError);
+});
+
 test("without picks", async (): Promise<void> => {
   const response = await request(app)
     .post("/ticket")
@@ -270,16 +280,6 @@ test("with a pick powerball greater than 26", (): void => {
           powerball: 27
         }
       ]
-    });
-
-  expect(t).toThrow(ValidationError);
-});
-
-test("with an invalid date", (): void => {
-  const t = (): void =>
-    validateBody({
-      ...validTicket,
-      date: "not a date"
     });
 
   expect(t).toThrow(ValidationError);
