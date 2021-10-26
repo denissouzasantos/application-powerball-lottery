@@ -88,9 +88,11 @@ Time:        3.107s
 Ran all test suites.
 ```
 ## Dockerizing application project
-docker build . -t app-powerball-lottery
+To create a container
+`docker build . -t app-powerball-lottery`
 
-docker run -p 3020:3000 -d interview/app-powerball-lottery
+To run container
+`docker run -p 3020:3000 -d interview/app-powerball-lottery`
 
 You can test if your container is running
 
