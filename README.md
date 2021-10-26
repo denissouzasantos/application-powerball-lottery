@@ -76,16 +76,16 @@ To shutdown the server simply send a `^C`.
 
 To run the existing (sample) tests simply use:
 
-`npm test`
+`npm run test`
 
 You should see output like this:
 
 ```txt
- Test Suites: 3 passed, 3 total
- Tests:       5 passed, 5 total
- Snapshots:   0 total
- Time:        2.585s
- Ran all test suites.
+Test Suites: 8 passed, 8 total
+Tests:       34 passed, 34 total
+Snapshots:   0 total
+Time:        3.107s
+Ran all test suites.
 ```
 ## Dockerizing application project
 docker build . -t app-powerball-lottery
