@@ -7,7 +7,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/denissouzasantos/interview.git"
+    "url": "https://github.com/denissouzasantos/application-powerball-lottery.git"
   },
   "engines": {
     "node": "^12"
